@@ -1,0 +1,12 @@
+{
+  "name": "imdb-poster",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "imdb-poster": "./imdb-poster.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "node-fetch": "^3.3.2"
+  }
+}
