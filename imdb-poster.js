@@ -34,7 +34,7 @@ async function getImdbPoster(url) {
   }
 
   const base = img.split("._")[0];
-  return `${base}._V1_UX1000_.jpg`;
+  return `    image_url: ${base}._V1_UX1000_.jpg`;
 }
 
 getImdbPoster(imdbUrl)
