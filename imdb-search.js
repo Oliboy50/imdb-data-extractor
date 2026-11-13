@@ -113,15 +113,15 @@ async function searchImdb(q) {
     const posterUrl = r.i && r.i.imageUrl ? `${r.i.imageUrl.split("._")[0]}._V1_UX1000_.jpg` : null;
     const seriesInfo = details[idx];
 
-    console.log(`[${idx + 1}] ${title} (${year}, ${type})`);
-    console.log(`    IMDb: ${imdbUrl}`);
+    console.log(`[${idx + 1}] ${imdbUrl}`);
+    console.log(`  - title: ${JSON.stringify(`${title} (${year}, ${type})`)}`);
     if (posterUrl) {
       console.log(`    image_url: ${posterUrl}`);
     } else {
       console.log(`    (No poster available)`);
     }
     if (seriesInfo) {
-      if (seriesInfo.number_of_episodes !== null && seriesInfo.episodes !== null) {
+      if (seriesInfo.episodes !== null) {
         console.log(`    number_of_episodes: ${seriesInfo.episodes}`);
       }
       if (seriesInfo.seasons !== null) {
